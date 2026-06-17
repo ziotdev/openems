@@ -27,6 +27,7 @@ Bundle-Description: This wraps external java libraries that do not have OSGi hea
 	io.helins:linux-i2c;version='1.0.2',\
 	io.helins:linux-io;version='0.0.4',\
 	io.jenetics:jenetics;version='8.3.0',\
+	io.nats:jnats;version='2.20.4',\
 	io.reactivex.rxjava3:rxjava;version='3.1.8',\
 	org.dhatim:fastexcel-reader;version='0.20.1',\
 	org.dhatim:fastexcel;version='0.20.1',\

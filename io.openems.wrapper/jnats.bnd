@@ -1,0 +1,25 @@
+Bundle-Name: jnats
+Bundle-Description: Java client for NATS and JetStream
+Bundle-DocURL: https://github.com/nats-io/nats.java
+Bundle-License: https://opensource.org/licenses/Apache-2.0
+Bundle-Version: 2.20.4
+
+Include-Resource: \
+	@jnats-2.20.4.jar,\
+
+Export-Package: \
+	io.nats.client,\
+	io.nats.client.api,\
+	io.nats.client.impl,\
+	io.nats.client.support,\
+
+# jnats only references net.i2p.crypto.eddsa from io.nats.client.NKey, which is
+# used solely for NKey/JWT (.creds) authentication. This provider supports only
+# username/password auth and never loads NKey, so the eddsa dependency is marked
+# optional to keep OSGi resolution clean without shipping the eddsa bundle.
+Import-Package: \
+	!io.nats.*,\
+	net.i2p.crypto.eddsa.*;resolution:=optional,\
+	*
+
+-sources: false

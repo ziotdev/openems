@@ -269,6 +269,15 @@
 		</dependency>
 		<dependency>
 			<!--
+			jnats - Java client for NATS / JetStream (zero runtime dependencies)
+			Changelog: https://github.com/nats-io/nats.java/releases
+			-->
+			<groupId>io.nats</groupId>
+			<artifactId>jnats</artifactId>
+			<version>2.20.4</version>
+		</dependency>
+		<dependency>
+			<!--
 			OpenEMS fork of j2mod - A Java Modbus implementation
 			Changelog: https://github.com/OpenEMS/j2mod/releases
 			Original: https://github.com/steveohara/j2mod/releases
